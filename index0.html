@@ -24,21 +24,15 @@
             <div class="panel panel-danger login">
                 <div class="panel-heading login-heading">Login</div>
                     <div class="panel-body">
-                        <?php
-                            if(isset($_GET['run']) && $_GET['run']=="failed")
-                            {
-                                echo "Your email or password does not match";
-                            }
-                        ?>
                         <!-- <form role="form" method="post" enctype="multipart/form-data"> -->
-                            <form name="login" onsubmit="return checkLogin()" action="signin_sub.php" method="post" enctype="multipart/form-data">
+                            <form name="login">
                             <div class="form-group">
                                 <label for="email"><p class="line0" ></p> Email:</label>
-                                <input type="email" class="form-control" id="email0" name="e" placeholder="Enter email">
+                                <input type="email" class="form-control" id="email0" placeholder="Enter email">
                             </div>
                             <div class="form-group">
                                 <label for="pwd"><p class="line0"></p>Password:</label>
-                                <input type="password" class="form-control" id="pwd0" name="p" placeholder="Enter password">
+                                <input type="password" class="form-control" id="pwd0" placeholder="Enter password">
                             </div>
                             <button type="submit" class="btn btn-default" onclick="checkLogin()">Submit</button>
                         </form>
@@ -50,13 +44,8 @@
             <div class="panel panel-danger signup">
                 <div class="panel-heading signup-heading">Signup</div>
                     <div class="panel-body">
-                            <?php if(isset($_GET['run']) && $_GET['run']=="success") 
-                            {
-                                echo "User registration successful!";
-                            }
-                            ?>
                         <!-- <form role="form" method="post" action="signup_sub.php" enctype="multipart/form-data"> -->
-                            <form name="form2" onsubmit="return checkSignup()" method="post" action="signup_sub.php" enctype="multipart/form-data">
+                            <form name="form2">
                             <div class="form-group">
                                 <label for="name"><p class="line0"></p>Name:</label>
                                 <input type="text" class="form-control" name="n" id="name" placeholder="Enter full name">
@@ -71,11 +60,11 @@
                             </div>
                             <div class="form-group">
                                 <label for="pwd"><p class="line0"></p>Confirm Password:</label>
-                                <input type="password" class="form-control" id="confirmPwd" placeholder="Enter password">
+                                <input type="password" class="form-control" name="p" id="confirmPwd" placeholder="Enter password">
                             </div>
                             <div class="form-group">
                                 <label for="file"><p class="line0"></p>Upload your image:</label>
-                                <input type="file" class="form-control" name="img" id="file" style="padding: 3px;">
+                                <input type="file" class="form-control" id="file" style="padding: 3px;">
                             </div>
                             <button type="submit" class="btn btn-default" onclick="checkSignup()">Submit</button>
                         </form>

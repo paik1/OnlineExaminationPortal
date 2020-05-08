@@ -1,0 +1,113 @@
+.header {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ecebeb), to(white));
+  background: linear-gradient(#ecebeb, white);
+  padding: 30px;
+}
+
+.header h1 {
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+}
+
+.header h1 span {
+  color: crimson;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.container .login {
+  border: none;
+  padding: 20px;
+  -webkit-box-shadow: 1px 1px 10px;
+          box-shadow: 1px 1px 10px;
+}
+
+.container .login .login-heading {
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 25px;
+  color: crimson;
+  text-align: center;
+  background-color: white;
+  border: none;
+}
+
+.container .login form .form-group label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .login form .form-group label .line0 {
+  background-color: crimson;
+  width: 4px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+.container .login form .form-group input {
+  padding: 20px;
+  outline: none;
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 18px;
+  color: black;
+  border-radius: 0px;
+}
+
+.container .login form button {
+  border: none;
+  -webkit-box-shadow: 1px 1px 8px;
+          box-shadow: 1px 1px 8px;
+  outline: none;
+  font-size: 16px;
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+.container .signup {
+  border: none;
+  padding: 20px;
+  -webkit-box-shadow: 1px 1px 10px;
+          box-shadow: 1px 1px 10px;
+}
+
+.container .signup .signup-heading {
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 25px;
+  color: crimson;
+  text-align: center;
+  background-color: white;
+  border: none;
+}
+
+.container .signup form .form-group label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .signup form .form-group label .line0 {
+  background-color: crimson;
+  width: 4px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+.container .signup form .form-group input {
+  padding: 20px;
+  outline: none;
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 18px;
+  color: black;
+  border-radius: 0px;
+}
+
+.container .signup form button {
+  border: none;
+  -webkit-box-shadow: 1px 1px 8px;
+          box-shadow: 1px 1px 8px;
+  outline: none;
+  font-size: 16px;
+  font-family: 'Hind Siliguri', sans-serif;
+}
+/*# sourceMappingURL=style.css.map */
