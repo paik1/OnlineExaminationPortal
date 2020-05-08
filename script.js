@@ -11,6 +11,7 @@ function checkLogin(){
     }
     if(pwd.length<8){
         alert('Your password length must be greater than 7 ');
+        return false;
     }
 }
 
@@ -26,10 +27,11 @@ function checkSignup(){
     }
     if(pwd.length<8){
         alert('Your password length must be greater than 7 ');
+        return false;
     }
     if(pwd != confirmPwd){
         alert('Please re-enter your password');
-        focus.confirmPwd
+        focus.confirmPwd;
         return false;
     }
 }
