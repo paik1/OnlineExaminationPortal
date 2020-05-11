@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 11, 2020 at 06:55 PM
+-- Generation Time: May 11, 2020 at 11:06 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.2.29
 
@@ -32,6 +32,17 @@ CREATE TABLE `category` (
   `cat_name` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `category`
+--
+
+INSERT INTO `category` (`id`, `cat_name`) VALUES
+(1, 'C'),
+(2, 'C++'),
+(3, 'Java'),
+(4, 'PHP'),
+(5, 'Python');
+
 -- --------------------------------------------------------
 
 --
@@ -40,7 +51,7 @@ CREATE TABLE `category` (
 
 CREATE TABLE `questions` (
   `id` int(11) NOT NULL,
-  `question` varchar(100) NOT NULL,
+  `question` varchar(500) NOT NULL,
   `ans1` varchar(80) NOT NULL,
   `ans2` varchar(80) NOT NULL,
   `ans3` varchar(80) NOT NULL,
@@ -102,7 +113,7 @@ ALTER TABLE `signup`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `questions`
