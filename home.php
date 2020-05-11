@@ -32,17 +32,26 @@ $profile->users_profile($email);
   <div class="tab-content">
     <div id="home" class="tab-pane fade in active">
       <h3>HOME</h3>
-      <center><button type="button" class="btn btn-primary">Start Exam</button></center>
-        <div class="form-group">
-            <label for="sel1">Select list:</label>
-                <select class="form-control" id="sel1">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                </select>
+      <center><button type="button" class="btn btn-primary" data-toggle="tab" href="#select">Click here to start your Exam</button></center>
+       <div class="col-sm-4"></div>
+       <div class="col-sm-4"><br>
+            <div id="select" class="tab-pane fade">
+                <form method="post" action="qus_show.php">
+                        <select class="form-control" id="sel1">
+                            <option >Select your Exam</option>
+                            <?php
+                            $profile->cat_shows();
+                            foreach($profile->cat as $category)
+                            { ?>
+                            <option value="<?php echo $category['id'] ?>"><?php echo $category['cat_name']; ?></option>
+                            <?php } ?>
+                        </select><br>
+                        <center><input type="submit" value="submit" class="btn btn-primary"></center>
+                </form>
+            
+            </div>
         </div>
-      
+        <div class="col-sm-4"></div>
     </div>
     <div id="menu1" class="tab-pane fade">
       <h3>Welcome User</h3>

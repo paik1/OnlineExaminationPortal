@@ -9,6 +9,7 @@ class users{
     public $db_name = "online_examination";
     public $conn;
     public $data;
+    public $cat;
 
     public function __construct()
     {
@@ -54,6 +55,26 @@ class users{
             $this->data[] = $row;
         }
         return $this->data;
+    }
+
+    public function cat_shows()
+    {
+        $query = $this->conn->query("select * from category");
+        while($row = $query->fetch_array(MYSQLI_ASSOC))
+        {   
+            $this->cat[] = $row;
+        }
+        return $this->cat;
+    }
+
+    public function qus_show()
+    {
+        $query = $this->conn->query("select * from questions");
+        while($row = $query->fetch_array(MYSQLI_ASSOC))
+        {   
+            $this->cat[] = $row;
+        }
+        return $this->cat;
     }
 }
 
