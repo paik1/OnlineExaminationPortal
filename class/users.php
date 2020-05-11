@@ -8,6 +8,7 @@ class users{
     public $pass = "";
     public $db_name = "online_examination";
     public $conn;
+    public $data;
 
     public function __construct()
     {
@@ -42,6 +43,17 @@ class users{
         else{
             return false;
         }
+    }
+
+    public function users_profile($email)
+    {
+        $query = $this->conn->query("select * from signup where email='$email'");
+        $row = $query->fetch_array(MYSQLI_ASSOC);
+        if($query->num_rows>0)
+        {   
+            $this->data[] = $row;
+        }
+        return $this->data;
     }
 }
 
