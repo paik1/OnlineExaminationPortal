@@ -10,6 +10,7 @@ class users{
     public $conn;
     public $data;
     public $cat;
+    public $question;
 
     public function __construct()
     {
@@ -67,14 +68,19 @@ class users{
         return $this->cat;
     }
 
-    public function qus_show()
+    public function qus_show($qus)
     {
-        $query = $this->conn->query("select * from questions");
+        $query = $this->conn->query("select * from questions where cat_id='$qus'");
         while($row = $query->fetch_array(MYSQLI_ASSOC))
         {   
-            $this->cat[] = $row;
+            $this->question[] = $row;
         }
-        return $this->cat;
+        return $this->question;
+    }
+
+    public function answer($data)
+    {
+        print_r($data);
     }
 }
 

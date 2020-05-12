@@ -37,7 +37,7 @@ $profile->users_profile($email);
        <div class="col-sm-4"><br>
             <div id="select" class="tab-pane fade">
                 <form method="post" action="qus_show.php">
-                        <select class="form-control" id="sel1">
+                        <select class="form-control" id="" name="cat">
                             <option >Select your Exam</option>
                             <?php
                             $profile->cat_shows();
