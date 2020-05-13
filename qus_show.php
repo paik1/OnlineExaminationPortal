@@ -4,6 +4,7 @@ include("class/users.php");
 $qus = new users;
 $cat = $_POST['cat'];
 $qus->qus_show($cat);
+$_SESSION['cat'] = $cat;
 ?>
 
 <!DOCTYPE html>
@@ -61,7 +62,7 @@ $qus->qus_show($cat);
       <?php } ?>
 
       <tr class="info">
-        <td><input type="radio" checked="checked" style="display:none;" value="4" name="<?php echo $qstn['id']; ?>"></td>
+        <td><input type="radio" checked="checked" style="display:none;" value="no_attempt" name="<?php echo $qstn['id']; ?>"></td>
       </tr>
 
 

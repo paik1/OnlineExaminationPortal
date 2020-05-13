@@ -80,7 +80,31 @@ class users{
 
     public function answer($data)
     {
-        print_r($data);
+        $ans = implode("",$data);
+        $right = 0;
+        $wrong = 0;
+        $no_answer=0;
+        $query = $this->conn->query("select id,ans from questions where cat_id='".$_SESSION['cat']."'");
+        while($qust = $query->fetch_array(MYSQLI_ASSOC))
+        {   
+            if($qust['ans']==$_POST[$qust['id']])
+            {
+                $right++;
+            }
+            elseif($_POST[$qust['id']]=="no_attempt")
+            {
+                $no_answer++;
+            }
+            else
+            {
+                $wrong++;
+            }
+        }
+        $array1 = array();
+        $array1['right'] = $right;
+        $array1['wrong'] = $wrong;
+        $array1['no_answer'] = $no_answer;
+        return $array1;
     }
 }
 
