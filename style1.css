@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background: -webkit-gradient(linear, left top, left bottom, from(#b9b9b9), to(white));
+  background: linear-gradient(#b9b9b9, white);
+  padding: 30px;
+}
+
+.header h1 {
+  font-size: 44px;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+}
+
+.header h1 span {
+  color: crimson;
+}
+
+a .btn {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid black;
+  font-size: 20px;
+  color: crimson;
+}
+
+.About {
+  margin: 0 auto;
+  margin-top: 50px;
+  max-width: 960px;
+  -webkit-box-shadow: 1px 1px 10px;
+          box-shadow: 1px 1px 10px;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.About .heading {
+  font-size: 50px;
+  margin-bottom: 0;
+}
+
+.About span {
+  color: crimson;
+  padding-bottom: 0;
+}
+
+.About p {
+  word-spacing: 10px;
+}
+
+.About .underline {
+  margin: 0;
+  padding: 0;
+  height: 4px;
+  width: 150px;
+  background-color: crimson;
+}
+
+.team-heading {
+  text-align: center;
+}
+
+.team-heading span {
+  color: crimson;
+  padding-bottom: 0;
+}
+
+.team-heading p {
+  word-spacing: 10px;
+}
+
+.team-heading .heading {
+  font-size: 50px;
+  margin-bottom: 0;
+}
+
+.underline {
+  margin: 0 auto;
+  margin-bottom: 50px;
+  padding: 0;
+  height: 4px;
+  width: 150px;
+  background-color: crimson;
+}
+
+.team {
+  display: -ms-grid;
+  display: grid;
+  padding: 10px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: minmax(300px, auto);
+  grid-gap: 10px;
+}
+
+.team div {
+  -webkit-box-shadow: 1px 1px 10px;
+          box-shadow: 1px 1px 10px;
+  padding: 10px;
+}
+
+.team div .name {
+  display: block;
+  text-align: center;
+  font-size: 23px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.team div .post {
+  display: block;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 10px;
+}
+/*# sourceMappingURL=style1.css.map */
