@@ -8,6 +8,9 @@ class users{
     public $pass = "";
     public $db_name = "online_examination";
     public $conn;
+    public $data;
+    public $cat;
+    public $question;
 
     public function __construct()
     {
@@ -42,6 +45,66 @@ class users{
         else{
             return false;
         }
+    }
+
+    public function users_profile($email)
+    {
+        $query = $this->conn->query("select * from signup where email='$email'");
+        $row = $query->fetch_array(MYSQLI_ASSOC);
+        if($query->num_rows>0)
+        {   
+            $this->data[] = $row;
+        }
+        return $this->data;
+    }
+
+    public function cat_shows()
+    {
+        $query = $this->conn->query("select * from category");
+        while($row = $query->fetch_array(MYSQLI_ASSOC))
+        {   
+            $this->cat[] = $row;
+        }
+        return $this->cat;
+    }
+
+    public function qus_show($qus)
+    {
+        $query = $this->conn->query("select * from questions where cat_id='$qus'");
+        while($row = $query->fetch_array(MYSQLI_ASSOC))
+        {   
+            $this->question[] = $row;
+        }
+        return $this->question;
+    }
+
+    public function answer($data)
+    {
+        $ans = implode("",$data);
+        $right = 0;
+        $wrong = 0;
+        $no_answer=0;
+        $query = $this->conn->query("select id,ans from questions where cat_id='".$_SESSION['cat']."'");
+        while($qust = $query->fetch_array(MYSQLI_ASSOC))
+        {   
+            if($qust['ans']==$_POST[$qust['id']])
+            {
+                $right++;
+            }
+            elseif($_POST[$qust['id']]=="no_attempt")
+            {
+                $no_answer++;
+            }
+            else
+            {
+                $wrong++;
+            }
+        }
+        $array1 = array();
+        $array1['right'] = $right;
+        $array1['wrong'] = $wrong;
+        $array1['no_answer'] = $no_answer;
+        return $array1;
     }
 }
 
