@@ -28,6 +28,19 @@ class users{
         return true;
     }
 
+    public function duplicate($dupque)
+    {
+        $check = $this->conn->query($dupque);
+        if (mysqli_num_rows($check)>0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     public function url($url)
     {
         header("location:".$url);
