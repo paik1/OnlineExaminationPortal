@@ -1,1 +1,59 @@
-/* No CSS *//*# sourceMappingURL=adminIndex.css.map */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background: -webkit-gradient(linear, left top, left bottom, from(#b9b9b9), to(white));
+  background: linear-gradient(#b9b9b9, white);
+  padding: 30px;
+}
+
+.header h1 {
+  font-size: 44px;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+}
+
+.header h1 span {
+  color: crimson;
+}
+
+center h1 {
+  display: block;
+  color: white;
+  padding: 20px;
+  background: -webkit-gradient(linear, left top, right top, from(#FC3360), color-stop(#FE553E), color-stop(#FE553E), to(#FC3360));
+  background: linear-gradient(to right, #FC3360, #FE553E, #FE553E, #FC3360);
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+.container center h3 {
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 29px;
+  font-weight: 900;
+}
+
+.container center h3 span {
+  color: crimson;
+}
+
+.container center input {
+  background-color: white;
+  border: none;
+  font-size: 20px;
+  font-family: 'Hind Siliguri', sans-serif;
+  border-bottom: 2.3px solid crimson;
+}
+
+.container form .form-group label span {
+  font-weight: 900;
+  font-size: 20px;
+  color: crimson;
+}
+
+.container form .form-group input {
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 15px;
+}
+/*# sourceMappingURL=adminIndex.css.map */

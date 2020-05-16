@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background: -webkit-gradient(linear, left top, left bottom, from(#b9b9b9), to(white));
+  background: linear-gradient(#b9b9b9, white);
+  padding: 30px;
+}
+
+.header h1 {
+  font-size: 44px;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+}
+
+.header h1 span {
+  color: crimson;
+}
+
+center h1 {
+  display: block;
+  color: white;
+  padding: 20px;
+  background: -webkit-gradient(linear, left top, right top, from(#FC3360), color-stop(#FE553E), color-stop(#FE553E), to(#FC3360));
+  background: linear-gradient(to right, #FC3360, #FE553E, #FE553E, #FC3360);
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+.btn {
+  margin-top: 20px;
+  background: #FE553E;
+}
+
+.btn a {
+  color: white;
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 20px;
+  border: none;
+  text-decoration: none;
+}
+
+.container {
+  position: relative;
+}
+
+.container #menu1 {
+  height: auto;
+  width: 420px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+  border: 2px solid lightgray;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.container #menu1 form input {
+  height: 30px;
+  outline: none;
+  font-size: 20px;
+  font-family: sans-serif;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid lightgray;
+}
+
+.container #menu1 form button {
+  padding: 9px;
+  margin-left: 17px;
+  font-size: 22px;
+  color: white;
+  background-color: #424242;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+}
+
+.container #menu1 form button:hover {
+  background-color: #707070;
+}
+
+.container #menu1 h2 {
+  margin-top: 20px;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 20px;
+}
+
+.container #menu1 ul {
+  list-style-type: none;
+  padding: 2px;
+}
+
+.container #menu1 ul li {
+  position: relative;
+  background-color: white;
+  font-size: 20px;
+  font-family: sans-serif;
+  border: 2px solid lightgray;
+  padding: 20px;
+}
+
+.container #menu2 {
+  margin-top: -800px;
+}
+
+.container #menu2 h3 {
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 40px;
+}
+
+.container #menu2 h3 span {
+  color: crimson;
+  font-size: 45px;
+}
+
+.container #menu2 select {
+  width: 100px;
+  margin-right: 50px;
+  height: 30px;
+  border: 1px solid black;
+  color: crimson;
+  border-radius: 10px;
+  text-align: center;
+  outline: none;
+}
+
+.container #menu2 center input {
+  padding: 15px;
+  font-size: 18px;
+  font-family: 'Hind Siliguri', sans-serif;
+  background-color: white;
+  border-radius: 10px;
+  border: none;
+  -webkit-box-shadow: green 1px 1px 10px;
+          box-shadow: green 1px 1px 10px;
+}
+
+.container #menu2 center input input:focus {
+  outline: none;
+}
+/*# sourceMappingURL=adminarea.css.map */
