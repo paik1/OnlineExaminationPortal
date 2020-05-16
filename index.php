@@ -27,7 +27,7 @@
                         <?php
                             if(isset($_GET['run']) && $_GET['run']=="failed")
                             {
-                                echo "Your email or password does not match";
+                                echo '<p style="color:crimson">Your email or password does not match</p>';
                             }
                         ?>
                         <!-- <form role="form" method="post" enctype="multipart/form-data"> -->
@@ -52,7 +52,7 @@
                     <div class="panel-body">
                             <?php if(isset($_GET['run']) && $_GET['run']=="success") 
                             {
-                                echo "User registration successful!";
+                                echo '<p style="color:green">User registration successful!</p>';
                             }
                             ?>
                         <!-- <form role="form" method="post" action="signup_sub.php" enctype="multipart/form-data"> -->
