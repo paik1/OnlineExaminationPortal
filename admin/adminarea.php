@@ -71,7 +71,7 @@
             
             if($insert_cat){
                 echo "<script>alert('Category has been inserted')</script>";
-                echo "<script>window.open('','_self')</script>";
+                echo "<script>window.open('adminarea.php','_self')</script>";
             }
         
         } 
