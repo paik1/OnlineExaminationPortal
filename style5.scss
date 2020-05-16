@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    background: linear-gradient(rgb(185, 185, 185),white) ;
+    padding: 30px;
+    h1{
+        font-size: 44px;
+        text-align: center;
+        font-family: 'Dancing Script', cursive;
+        span{
+            color: crimson;
+        }
+    }
+}
+h2{
+    text-align: center;
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 40px;
+    span{
+        color: crimson;
+    }
+}
+table{
+    thead{
+        tr{
+            th{
+                font-family: 'Hind Siliguri', sans-serif;
+                font-size: 17px;
+                font-weight: bolder;
+            }
+        }
+    }
+    tbody{
+        tr{
+            td{
+                font-family: 'Hind Siliguri', sans-serif;
+                font-size: 17px;
+            }
+        }
+    }
+}

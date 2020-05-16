@@ -1,9 +1,7 @@
 <?php
-
 include("class/users.php");
 $ans = new users;
 $answer = $ans->answer($_POST);
-
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +10,9 @@ $answer = $ans->answer($_POST);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style5.css">
     <title>Answer</title>
 </head>
 <body>
@@ -19,11 +20,13 @@ $answer = $ans->answer($_POST);
     $total_qus = $answer['right'] + $answer['wrong'] + $answer['no_answer'];
     $attempt_qus = $answer['right'] + $answer['wrong'];
     ?>
-
+    <div class="header">
+    <h1> <span>O</span>nline <span>E</span>xamination <span>P</span>ortal</h1>
+ </div>
     <div class="container">
     <div class="col-sm-2"></div>
     <div class="col-sm-8">
-        <h2>Results</h2>                       
+        <h2><span>R</span>esults</h2>                       
         <table class="table table-bordered">
             <thead>
             <tr>
@@ -37,11 +40,11 @@ $answer = $ans->answer($_POST);
                 <td><?php echo $attempt_qus;?></td>
             </tr>
             <tr>
-                <td>Right answer</td>
+                <td style="color:green">Right answer</td>
                 <td><?php echo $answer['right'];?></td>
             </tr>
             <tr>
-                <td>Wrong answer</td>
+                <td style="color:crimson">Wrong answer</td>
                 <td><?php echo $answer['wrong'];?></td>
             </tr>
             <tr>

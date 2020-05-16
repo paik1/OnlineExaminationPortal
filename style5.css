@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background: -webkit-gradient(linear, left top, left bottom, from(#b9b9b9), to(white));
+  background: linear-gradient(#b9b9b9, white);
+  padding: 30px;
+}
+
+.header h1 {
+  font-size: 44px;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+}
+
+.header h1 span {
+  color: crimson;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 40px;
+}
+
+h2 span {
+  color: crimson;
+}
+
+table thead tr th {
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 17px;
+  font-weight: bolder;
+}
+
+table tbody tr td {
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 17px;
+}
+/*# sourceMappingURL=style5.css.map */
