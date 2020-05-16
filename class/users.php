@@ -84,7 +84,7 @@ class users{
 
     public function qus_show($qus)
     {
-        $query = $this->conn->query("select * from questions where cat_id='$qus' order by rand() limit 10");
+        $query = $this->conn->query("select * from questions where cat_id='$qus' order by rand()");
         while($row = $query->fetch_array(MYSQLI_ASSOC))
         {   
             $this->question[] = $row;
