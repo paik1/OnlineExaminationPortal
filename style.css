@@ -1,10 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .header {
-  background: -webkit-gradient(linear, left top, left bottom, from(#ecebeb), to(white));
-  background: linear-gradient(#ecebeb, white);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b9b9b9), to(white));
+  background: linear-gradient(#b9b9b9, white);
   padding: 30px;
 }
 
 .header h1 {
+  font-size: 44px;
   text-align: center;
   font-family: 'Dancing Script', cursive;
 }
