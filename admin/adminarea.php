@@ -11,6 +11,10 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="adminarea.css">
   <style>
       #menu2{
         position: relative;
@@ -19,27 +23,24 @@
 </head>
 <body>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Admin Panel</a>
-    </div>
-  </div>
-</nav>
-  
-<div class="container">
-    <h2>Welcome Admin User</h2>
-<ul class="nav nav-tabs">
-    <li><a data-toggle="tab" href="#menu1">Categories</a></li>
-    <li><a data-toggle="tab" href="#menu2">Questions</a></li>
-    
-  </ul>
+<div class="header">
+    <h1> <span>O</span>nline <span>E</span>xamination <span>P</span>ortal</h1>
+</div>
 
-  
+<center>
+<h1>Admin Panel</h1>
+</center>
+
+<center><h2>Welcome Admin User</h2></center>
+
+  <center>
+    <button class="btn btn-default"><a data-toggle="tab" href="#menu1">Categories</a></button><br>
+    <button class="btn btn-default"><a data-toggle="tab" href="#menu2">Questions</a></button>
+  </center>
+  <div class="container">
     <div id="menu1" class="tab-pane fade">
-      <h3>Categoires</h3>
-      <?php
-
+       <?php
+/*
             $sel_c = "select * from category";
 
             $run_c = mysqli_query($con, $sel_c);
@@ -50,15 +51,36 @@
                 $cat1 = $row_cat1['cat_name'];
                 echo "<p> $cat1 </p><br>";
             }
-      ?>
+            */
+      ?> 
 
-        <h3>Add a category</h3>    
+
+        <h3 style="font-family: 'Montserrat', sans-serif;">Add category</h3>    
         <form method=post >
             <div class="form-group">
             <input type="text" class="form-control" id="cat" placeholder="Enter a new category" name="cat">
             </div>
-            <input type="submit" name="add_cat" value="Add">
+            <button type="submit"  name="add_cat" value="Add">Add</button>
+            
         </form>
+        <h2>Categories</h2>
+            <ul id="list">
+            <?php
+
+            $sel_c = "select * from category";
+
+            $run_c = mysqli_query($con, $sel_c);
+
+
+            while($row_cat1 = mysqli_fetch_array($run_c))
+            {
+                $cat1 = $row_cat1['cat_name'];  
+                echo '<li class="listItems">'.$cat1.'</li>';
+            }
+            
+      ?>
+
+            </ul>
         <?php
 
         if(isset($_POST['add_cat'])){
@@ -71,35 +93,38 @@
             
             if($insert_cat){
                 echo "<script>alert('Category has been inserted')</script>";
-                echo "<script>window.open('','_self')</script>";
+                echo "<script>window.open('adminarea.php','_self')</script>";
             }
-        
         } 
 
         ?>
     </div>
+    <script src="script.js"></script>
 
-    <div id="menu2" class="tab-pane fade">
-      <h3>Add a new Question</h3>
+    <div id="menu2" class="tab-pane fade" >
+     <h3><span>I</span> Add a new Question</h3>
       <form method=post >
             <div class="form-group">
-            <input type="text" class="form-control"  placeholder="Enter a Question" name="qus">
-            
-            <input type="text" class="form-control"  placeholder="Enter Option 1" name="ans1">
+            <input type="text" class="form-control"  placeholder="Enter a Question" name="qus" style="padding:20px; font-size:20px; font-family: 'Hind Siliguri', sans-serif; border:3px solid black">
+            <br>
+            <input type="text" class="form-control"  placeholder="Enter Option 1" name="ans1" style="padding:20px; font-family: 'Hind Siliguri', sans-serif; margin-top:10px; border:1px solid black">
 
-            <input type="text" class="form-control"  placeholder="Enter Option 2" name="ans2">
+            <input type="text" class="form-control"  placeholder="Enter Option 2" name="ans2"
+            style="padding:20px; font-family: 'Hind Siliguri', sans-serif; margin-top:10px;border:1px solid black">
             
-            <input type="text" class="form-control" placeholder="Enter Option 3" name="ans3">
+            <input type="text" class="form-control" placeholder="Enter Option 3" name="ans3"
+            style="padding:20px; font-family: 'Hind Siliguri', sans-serif; margin-top:10px; border:1px solid black">
 
-            <input type="text" class="form-control" placeholder="Enter Option 4" name="ans4">
+            <input type="text" class="form-control" placeholder="Enter Option 4" name="ans4"
+            style="padding:20px; font-family: 'Hind Siliguri', sans-serif; margin-top:10px; margin-bottom:20px; border:1px solid black">
 
             <select name="ans" required>
                 <option value="0">1</option>
                 <option value="1">2</option>
                 <option value="2">3</option>
                 <option value="3">4</option>
-            </select><br>
-            
+            </select>
+      
             <select name="cats" required>
                 <?php
 
@@ -116,7 +141,7 @@
                 }
                 ?>
             </select><br>
-            <input type="submit" name="add_qus" value="Add Question">
+            <center><input type="submit" name="add_qus" value="Add Question"></center>
 
             
             </div>
@@ -125,11 +150,15 @@
         </form>
       
     </div>
+           
   </div>
 </div>
 
 
+
 </body>
+
+
 </html>
 
 

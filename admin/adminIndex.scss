@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    background: linear-gradient(rgb(185, 185, 185),white) ;
+    padding: 30px;
+    h1{
+        font-size: 44px;
+        text-align: center;
+        font-family: 'Dancing Script', cursive;
+        span{
+            color: crimson;
+        }
+    }
+}
+center{
+    
+    h1{
+        display: block;
+        color: white;
+        padding: 20px;
+        background: linear-gradient(to right ,#FC3360,#FE553E,#FE553E,#FC3360);
+        font-family: 'Hind Siliguri', sans-serif;
+    }
+}
+
+.container{
+    center{
+        h3{
+            font-family: 'Hind Siliguri', sans-serif;
+            font-size: 29px;
+            font-weight: 900;
+            span{
+                color: crimson;
+            }
+        }
+        input{
+            background-color: white;
+            border: none;
+            font-size: 20px;
+            font-family: 'Hind Siliguri', sans-serif;
+            border-bottom: 2.3px solid crimson;
+        }
+    }
+        form{
+            .form-group{
+                
+               label{
+                
+                   span{
+                       font-weight: 900;
+                       font-size: 20px;
+                       color: crimson;
+                   }
+               }
+               input{
+                font-family: 'Hind Siliguri', sans-serif;
+                font-size: 15px;  
+               }
+            }
+        }
+    
+}
