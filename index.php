@@ -54,6 +54,10 @@
                             {
                                 echo '<p style="color:green">User registration successful!</p>';
                             }
+                            elseif(isset($_GET['message']) && $_GET['message']=="alreadyexists")
+                            {
+                                echo "Email id already exists!";
+                            }
                             ?>
                         <!-- <form role="form" method="post" action="signup_sub.php" enctype="multipart/form-data"> -->
                             <form name="form2" onsubmit="return checkSignup()" method="post" action="signup_sub.php" enctype="multipart/form-data">
