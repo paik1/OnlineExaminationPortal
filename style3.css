@@ -147,4 +147,21 @@ body {
 #menu1 tbody td img {
   border-radius: 50%;
 }
+
+#menu3 {
+  margin-top: 200px;
+}
+
+#menu3 h3 {
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+}
+
+#menu3 button a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: large;
+}
 /*# sourceMappingURL=style3.css.map */

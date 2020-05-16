@@ -143,7 +143,7 @@ $profile->users_profile($email);
     </div>
     <div id="menu3" class="tab-pane fade">
         <center>
-      <h3>Would you like logout?</h3>
+      <h3>Would you like to logout?</h3>
 
       <button type="button" class="btn btn-danger"><a href="logout.php">Yes</a></button>
       <button type="button" class="btn btn-success"><a href="home.php">No</a></button>
