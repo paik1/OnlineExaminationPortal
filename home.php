@@ -1,6 +1,6 @@
 <?php
 
-
+include("includes/db.php");
 include("class/users.php");
 $email = $_SESSION['email'];
 $profile =  new users;
@@ -31,7 +31,8 @@ $profile->users_profile($email);
   <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#home"> <span>H</span>ome</a></li>
     <li><a data-toggle="tab" href="#menu1"><span>U</span>ser <span>P</span>rofile</a></li>
-    <li><a data-toggle="tab" href="#menu2"><span>M</span>enu 2</a></li>
+    <li><a data-toggle="tab" href="#menu2"><span>R</span>esult <span>H</span>istory</a></li>
+    
     <li style="float:right;" class="logout"><a data-toggle="tab" href="#menu3">Logout</a></li>
   </ul>
 
@@ -53,7 +54,7 @@ $profile->users_profile($email);
                             <option value="<?php echo $category['id'] ?>"><?php echo $category['cat_name']; ?></option>
                             <?php } ?>
                         </select><br>
-                        <center><input type="submit" value="start" class="btn btn-primary submit-btn"><i class="fas fa-play" style="color:crimson"></i></center>
+                        <center><input type="submit" value="submit" class="btn btn-primary submit-btn"><i class="fas fa-play" style="color:crimson"></i></center>
                 </form>
             
             </div>
@@ -77,19 +78,68 @@ $profile->users_profile($email);
         foreach($profile->data as $prof)
         {?>
 
-          
+        <tr>
                 <td><?php echo $prof['id']; ?></td>
                 <td><?php echo $prof['name']; ?></td>
                 <td><?php echo $prof['email']; ?></td>
                 <td><img src="<?php echo $prof['img']; ?>" alt="<?php echo $prof['name']; ?> image" width=100px height=100px></td>
-            </tr>  <tr>
+            </tr>  
     </tbody>
         <?php }?>
   </table>
     </div>
     <div id="menu2" class="tab-pane fade">
-      <h3>Menu 2</h3>
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+      <h3>All Results</h3>
+        <div class="table-responsive">          
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Exam Name</th>
+                    <th>Test Date</th>
+                    <th>Total Questions</th>
+                    <th>Scores Obtained</th>    
+                </tr>
+                </thead>
+                <?php 
+                
+                $get_result = "select * from results where email='$email'";
+
+                $run_result = mysqli_query($con, $get_result);
+                $i = 1;
+    
+                while($row_result=mysqli_fetch_array($run_result)){
+                    
+                    
+                    $cat_id = $row_result['cat_id'];
+                    $total_qus = $row_result['total_qus'];
+                    $date = $row_result['date'];
+                    $perc = $row_result['per'];   
+                    
+                    $show_c = "select * from category where id='$cat_id'";
+                    $run_c = mysqli_query($con, $show_c);
+                    
+                    while($row_cate = mysqli_fetch_array($run_c))
+                    {
+                        $show_cat = $row_cate['cat_name'];
+                    }
+
+                    echo "<tbody>
+                            <tr>
+                                <td>$i</td>
+                                <td>$show_cat</td>
+                                <td>$date</td>
+                                <td>$total_qus</td>
+                                <td>$perc%</td>
+                            </tr>
+                        </tbody>";
+
+                $i++;   
+                }
+                ?>
+                
+            </table>
+        </div>
     </div>
     <div id="menu3" class="tab-pane fade">
       <h3>Menu 3</h3>

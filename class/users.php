@@ -48,6 +48,7 @@ class users{
 
     public function signin($email,$pass)
     {
+        $_SESSION['user_email'] = $email;
         $query = $this->conn->query("select email,pass from signup where email='$email' and pass='$pass'");
         $query->fetch_array(MYSQLI_ASSOC);
         if($query->num_rows>0)
