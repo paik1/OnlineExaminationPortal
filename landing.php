@@ -51,12 +51,12 @@
         <div>
             <p class="name" style="margin-bottom: 10px;"><span style="color: crimson;">L</span>ikhita <span style="color: crimson;">P</span>uli</p>
             <p class="post">Front-end Developer</p>
-            <img src="Untitled-1.png" alt="" srcset="" width="250px" style=" margin: 0 auto; display: block;border-radius: 50%;">
+            <img src="girl.jpg" alt="" srcset="" width="250px" height="250px" style=" margin: 0 auto; display: block;border-radius: 50%;">
         </div>
         <div>
             <p class="name" style="margin-bottom: 10px;"><span style="color: crimson;">L</span>asya <span style="color: crimson;">P</span>rasanna<span style="color: crimson;">V</span>ajrapu </p>
             <p class="post">Back-end Developer</p>
-            <img src="Untitled-1.png" alt="" srcset="" width="250px" style=" margin: 0 auto; display: block;border-radius: 50%;">
+            <img src="girl.jpg" alt="" srcset="" width="250px" height="250px" style=" margin: 0 auto; display: block;border-radius: 50%;">
         </div>
         
     </div>
