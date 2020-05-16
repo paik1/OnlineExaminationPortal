@@ -1,0 +1,150 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    background: linear-gradient(rgb(185, 185, 185),white) ;
+    padding: 30px;
+    h1{
+        font-size: 44px;
+        text-align: center;
+        font-family: 'Dancing Script', cursive;
+        span{
+            color: crimson;
+        }
+    }
+}
+.nav{
+    li{
+        a{
+            font-family: 'Hind Siliguri', sans-serif;
+            font-size: 20px;
+            color: crimson;
+            font-weight: 900;
+            
+        }  
+    }
+    
+    
+    .logout{
+        
+        a:hover{
+            background-color: rgb(233, 233, 233);
+            
+        }
+    }
+    .logout:focus{
+        background-color: rgb(233, 233, 233);
+        color: crimson;
+    }
+}
+#home{
+    .line{
+        background-color: crimson;
+        height: 3px;
+        width: 50px;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    h3{
+        font-family: 'Hind Siliguri', sans-serif;
+        font-size: 35px;
+        padding: 20px;
+        padding-top:0;
+        margin-top: 0;
+        span{
+            color: crimson;
+        }
+    }
+}
+.select-sub{
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'Hind Siliguri', sans-serif;
+    background-color: rgb(247, 35, 77);
+    border: none;
+    outline: none;
+}
+.select-sub:hover{
+    background-color: rgb(247, 35, 77) !important;
+    border: none;
+    outline: none;
+    box-shadow: crimson 1px 1px 20px;
+}
+.select-sub:focus{
+    background-color: rgb(247, 35, 77) !important;
+    border: none;
+    outline: none;
+    box-shadow: crimson 1px 1px 20px;
+}
+
+.form-control{
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 20px;
+    height: 50px;
+    option{
+        color: crimson;
+    }
+}
+
+.submit-btn{
+    background-color: white;
+    color: crimson;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+}
+.submit-btn:hover{
+    background-color: white;
+    color: crimson;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+}
+
+
+
+#menu1{
+    .line{
+        background-color: crimson;
+        height: 3px;
+        width: 50px;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    h3{
+        font-family: 'Hind Siliguri', sans-serif;
+        font-size: 35px;
+        padding: 20px;
+        padding-top:0;
+        margin-top: 0;
+        span{
+            color: crimson;
+        }
+    }
+    thead{
+        tr{
+            th{
+                font-family: 'Hind Siliguri', sans-serif;
+                font-size: 18px;
+                span{
+                    color: crimson;
+                    font-size: 20px;
+                    font-weight: bolder;
+                }
+            }
+        }
+    }
+    tbody{
+        td{
+            font-family: 'Hind Siliguri', sans-serif;
+            font-size: 20px;
+            img{
+                border-radius: 50%;
+            }
+        }
+    }
+}

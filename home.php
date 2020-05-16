@@ -17,28 +17,35 @@ $profile->users_profile($email);
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style2.css">
+</head> 
 <body>
-
+<div class="header">
+    <h1> <span>O</span>nline <span>E</span>xamination <span>P</span>ortal</h1>
+ </div>
 <div class="container">
-  <h2>Online Examination Portal</h2>
   <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
-    <li><a data-toggle="tab" href="#menu1">User Profile</a></li>
-    <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
-    <li style="float:right;"><a data-toggle="tab" href="#menu3">Logout</a></li>
+    <li class="active"><a data-toggle="tab" href="#home"> <span>H</span>ome</a></li>
+    <li><a data-toggle="tab" href="#menu1"><span>U</span>ser <span>P</span>rofile</a></li>
+    <li><a data-toggle="tab" href="#menu2"><span>M</span>enu 2</a></li>
+    <li style="float:right;" class="logout"><a data-toggle="tab" href="#menu3">Logout</a></li>
   </ul>
 
-  <div class="tab-content">
+  <div class="tab-content"> 
     <div id="home" class="tab-pane fade in active">
-      <h3>HOME</h3>
-      <center><button type="button" class="btn btn-primary" data-toggle="tab" href="#select">Click here to start your Exam</button></center>
+      <p class="line"></p>
+      <h3> <span>H</span>OME</h3>
+      <center><button type="button" class="btn btn-primary select-sub" data-toggle="tab" href="#select">Click here to start your Exam</button></center>
        <div class="col-sm-4"></div>
        <div class="col-sm-4"><br>
             <div id="select" class="tab-pane fade">
                 <form method="post" action="qus_show.php">
                         <select class="form-control" id="" name="cat">
-                            <option >Select your Exam</option>
+                            <option>Select your Exam</option>
                             <?php
                             $profile->cat_shows();
                             foreach($profile->cat as $category)
@@ -46,7 +53,7 @@ $profile->users_profile($email);
                             <option value="<?php echo $category['id'] ?>"><?php echo $category['cat_name']; ?></option>
                             <?php } ?>
                         </select><br>
-                        <center><input type="submit" value="submit" class="btn btn-primary"></center>
+                        <center><input type="submit" value="start" class="btn btn-primary submit-btn"><i class="fas fa-play" style="color:crimson"></i></center>
                 </form>
             
             </div>
@@ -54,14 +61,15 @@ $profile->users_profile($email);
         <div class="col-sm-4"></div>
     </div>
     <div id="menu1" class="tab-pane fade">
-      <h3>Welcome User</h3>
+    <p class="line"></p>
+      <h3> <span>W</span>elcome <span>U</span>ser</h3>
       <table class="table">
     <thead>
       <tr>
-        <th>id</th>
-        <th>name</th>
-        <th>email</th>
-        <th>image</th>
+        <th><span>I</span> Id</th>
+        <th><span>I</span> Name</th>
+        <th><span>I</span> Email</th>
+        <th><span>I</span> Photo</th>
       </tr>
     </thead>
     <tbody>
@@ -69,12 +77,12 @@ $profile->users_profile($email);
         foreach($profile->data as $prof)
         {?>
 
-            <tr>
+          
                 <td><?php echo $prof['id']; ?></td>
                 <td><?php echo $prof['name']; ?></td>
                 <td><?php echo $prof['email']; ?></td>
-                <td><img src="img/<?php echo $prof['img']; ?>" alt="<?php echo $prof['name']; ?> image" width=35 height=30></td>
-            </tr>
+                <td><img src="<?php echo $prof['img']; ?>" alt="<?php echo $prof['name']; ?> image" width=100px height=100px></td>
+            </tr>  <tr>
     </tbody>
         <?php }?>
   </table>
