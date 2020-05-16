@@ -39,4 +39,15 @@ table tbody tr td {
   font-family: 'Hind Siliguri', sans-serif;
   font-size: 17px;
 }
+
+input {
+  padding: 10px;
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 17px;
+  border: none;
+  border-radius: 12px;
+  -webkit-box-shadow: green 1px 1px 10px;
+          box-shadow: green 1px 1px 10px;
+  color: crimson;
+}
 /*# sourceMappingURL=style5.css.map */

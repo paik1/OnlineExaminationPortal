@@ -62,6 +62,7 @@ $answer = $ans->answer($_POST);
             </tr>
             </tbody>
         </table>
+        <center> <a href="home.php"><input type="submit" value="Go back"></a>  </center>
     </div>
     <div class="col-sm-2"></div>  
     </div>
