@@ -48,6 +48,7 @@ class users{
 
     public function signin($email,$pass)
     {
+        $_SESSION['user_email'] = $email;
         $query = $this->conn->query("select email,pass from signup where email='$email' and pass='$pass'");
         $query->fetch_array(MYSQLI_ASSOC);
         if($query->num_rows>0)
@@ -83,7 +84,7 @@ class users{
 
     public function qus_show($qus)
     {
-        $query = $this->conn->query("select * from questions where cat_id='$qus'");
+        $query = $this->conn->query("select * from questions where cat_id='$qus' order by rand()");
         while($row = $query->fetch_array(MYSQLI_ASSOC))
         {   
             $this->question[] = $row;

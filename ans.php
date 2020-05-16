@@ -1,4 +1,5 @@
 <?php
+include("includes/db.php");
 include("class/users.php");
 $ans = new users;
 $answer = $ans->answer($_POST);
@@ -69,3 +70,20 @@ $answer = $ans->answer($_POST);
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 </html>
+<?php
+
+    $current_date = date("Y-m-d H:i:s");
+    $u_mail = $_SESSION['user_email'];
+    $u_cat = $_SESSION['cat'];
+
+    $insert_result = "insert into results (email,cat_id,total_qus,per,date) values ('$u_mail','$u_cat','$total_qus','$per','$current_date')";
+
+    $insert_res = mysqli_query($con, $insert_result);
+
+    if($insert_res){
+        echo "<script>alert('Your results have been submitted')</script>";
+        echo "<script>window.open('','_self')</script>";
+    }
+
+
+?>
