@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background: -webkit-gradient(linear, left top, left bottom, from(#b9b9b9), to(white));
+  background: linear-gradient(#b9b9b9, white);
+  padding: 30px;
+}
+
+.header h1 {
+  font-size: 44px;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+}
+
+.header h1 span {
+  color: crimson;
+}
+
+.line {
+  background-color: crimson;
+  height: 4px;
+  width: 150px;
+  margin-top: 40px;
+}
+
+h2 {
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 35px;
+  margin-top: 0;
+}
+
+h2 span {
+  color: crimson;
+}
+
+table {
+  margin-top: 50px;
+  border: none !important;
+}
+
+table thead tr {
+  border: none !important;
+}
+
+table thead tr th {
+  padding: 0 !important;
+  border: none !important;
+  padding: 0;
+  background-color: white !important;
+}
+
+table thead tr th pre {
+  margin: 0;
+  background-color: white;
+  background-color: white !important;
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 15px !important;
+  font-weight: 900;
+}
+
+table thead tr th pre span {
+  color: crimson;
+}
+
+table .info {
+  border: none !important;
+}
+
+table .info td {
+  border: none !important;
+  background-color: #a2aeb9 !important;
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 15px;
+}
+
+.submit-btn {
+  background-color: white;
+  border: none;
+  color: crimson;
+  font-size: 20px;
+  margin-bottom: 40px;
+  font-family: 'Hind Siliguri', sans-serif;
+}
+/*# sourceMappingURL=style4.css.map */

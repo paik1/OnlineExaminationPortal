@@ -1,0 +1,80 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    background: linear-gradient(rgb(185, 185, 185),white) ;
+    padding: 30px;
+    h1{
+        font-size: 44px;
+        text-align: center;
+        font-family: 'Dancing Script', cursive;
+        span{
+            color: crimson;
+        }
+    }
+}
+.line{
+    background-color: crimson;
+    height: 4px;
+    width: 150px;
+    margin-top: 40px;
+}
+h2{
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 35px;
+    margin-top: 0;
+    span{
+        color: crimson;
+    }
+}
+table{
+    margin-top: 50px;
+    border: none !important;
+    
+    thead{
+        
+        tr{
+            border: none !important;
+            
+            th{
+                padding: 0 !important;
+                border: none !important;
+                padding:0 ;
+                background-color: white !important;
+                pre{
+                    margin: 0;
+                    background-color: white;
+                    background-color: white !important;
+                    font-family: 'Hind Siliguri', sans-serif;
+                    font-size: 15px !important;
+                    font-weight: 900;
+
+                    span{
+                        color: crimson;
+                    }
+                }
+                
+            }
+        }
+    }
+    .info{
+        border: none !important;
+        td{
+            border: none !important;
+            background-color: rgb(162, 174, 185) !important;
+            font-family: 'Hind Siliguri', sans-serif;
+            font-size: 15px;
+        }
+    }
+}
+
+.submit-btn{
+    background-color: white;
+    border: none;
+    color: crimson;
+    font-size: 20px;
+    margin-bottom: 40px;
+    font-family: 'Hind Siliguri', sans-serif;
+}

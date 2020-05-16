@@ -14,6 +14,9 @@ $_SESSION['cat'] = $cat;
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style4.css">
   <script>
       function timeout()
             {
@@ -46,11 +49,17 @@ $_SESSION['cat'] = $cat;
   </script>
 </head>
 <body onload="timeout()">
+<body>
+
+<div class="header">
+    <h1> <span>O</span>nline <span>E</span>xamination <span>P</span>ortal</h1>
+ </div>
 
 <div class="container">
     <div class="col-sm-2"></div>
     <div class="col-sm-8">
-  <h2>Your exam has started 
+    <p class="line"></p>
+  <h2><span>Y</span>our <span>e</span>xam <span>h</span>as <span>s</span>tarted 
   <script type="text/javascript">
     var timeLeft=2*60;
   </script>
@@ -63,48 +72,50 @@ $_SESSION['cat'] = $cat;
   <table class="table table-bordered">
     <thead>
       <tr class="danger">
-        <th><?php echo $i; ?>.&emsp;<?php echo $qstn['question'] ?></th>
+        <th><pre> <?php echo  "<span>$i</span>"; ?><span>.&emsp;</span>
+        <?php echo $qstn["question"]; ?></pre></th>
       </tr>
     </thead>
     <tbody>
-
+      
+    
 
         <?php if(isset($qstn['ans1'])) {?>
       <tr class="info">
-        <td>&nbsp;i  &emsp;<input type="radio" value="0" name="<?php echo $qstn['id']; ?>"></in><?php echo $qstn['ans1']; ?></td>
+        <td><span>&nbsp;i&emsp;</span> <input type="radio" value="0" name="<?php echo $qstn['id']; ?>"></in><?php echo $qstn['ans1']; ?></td>
       </tr>
         <?php } ?>
 
 
       <?php if(isset($qstn['ans2'])) {?>
       <tr class="info">
-        <td>&nbsp;ii &emsp;<input type="radio" value="1" name="<?php echo $qstn['id']; ?>"></in><?php echo $qstn['ans2'] ?></td>
+        <td><span>&nbsp;ii&emsp;</span> <input type="radio" value="1" name="<?php echo $qstn['id']; ?>"></in><?php echo $qstn['ans2'] ?></td>
       </tr>
       <?php } ?>
 
 
       <?php if(isset($qstn['ans3'])) {?>
       <tr class="info">
-        <td>&nbsp;iii&emsp;<input type="radio" value="2" name="<?php echo $qstn['id']; ?>"></in><?php echo $qstn['ans3'] ?></td>
+        <td><span>&nbsp;iii&emsp;</span> <input type="radio" value="2" name="<?php echo $qstn['id']; ?>"></in><?php echo $qstn['ans3'] ?></td>
       </tr>
       <?php } ?>
 
 
       <?php if(isset($qstn['ans4'])) {?>
       <tr class="info">
-        <td>&nbsp;iv &emsp;<input type="radio" value="3" name="<?php echo $qstn['id']; ?>"></in><?php echo $qstn['ans4'] ?></td>
+        <td><span>&nbsp;iv&emsp;</span>  <input type="radio" value="3" name="<?php echo $qstn['id']; ?>"></in><?php echo $qstn['ans4'] ?></td>
       </tr>
       <?php } ?>
 
       <tr class="info">
-        <td><input type="radio" checked="checked" style="display:none;" value="no_attempt" name="<?php echo $qstn['id']; ?>"></td>
+        <td><input type="radio" checked="checked" style="display:none !important;" value="no_attempt" name="<?php echo $qstn['id']; ?>"></td>
       </tr>
 
 
     </tbody>
   </table>
   <?php $i++; } ?>
-  <center><input type="submit" value="Submit Exam" class="btn btn-success"></center>
+  <center><input type="submit" value="Submit" class="btn btn-success submit-btn"></center>
   </form>
   </div>
   <div class="col-sm-2"></div>
