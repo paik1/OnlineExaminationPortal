@@ -22,7 +22,7 @@
     <div class="header">
         <h1> <span>O</span>nline <span>E</span>xamination <span>P</span>ortal</h1>
      </div> 
-    <a href="index.php"><button class="btn btn-default">Get Started <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button></a> 
+     <center><button class="btn btn-default"><a href="index.php">Get Started <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a></button></center>
     <div class="About">
         <p class="heading" style="font-family: 'Maven Pro', sans-serif;"> <span style="font-family: 'Abril Fatface', cursive;">A</span>bout</p>
         <p class="underline"></p>

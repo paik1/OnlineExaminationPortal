@@ -15,17 +15,17 @@ body{
         }
     }
 }
-a{
-
+center{
     .btn{
-        display: block;
-        margin: 0 auto;
         border: 1px solid black;
-        font-size: 20px;
-        color: crimson;
+        a{
+            
+            font-size: 20px;
+            color: crimson;
+            text-decoration: none;
+        }
     }
 }
-
 .About{
     margin: 0 auto;
     margin-top: 50px;
