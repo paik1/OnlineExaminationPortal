@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-}
+} 
 
 .header{
     background: linear-gradient(rgb(185, 185, 185),white) ;
@@ -36,9 +36,9 @@ center{
         text-decoration: none;
     }
 }
-.container{
-    position: relative;
+
     #menu1{
+        
         height: auto;
         width: 420px;
         display: block;
@@ -47,9 +47,10 @@ center{
         border:2px solid lightgray;
         padding: 20px;
         background-color: #f4f4f4;
+        display: none;
 
         form{
-            & input{
+             input{
                 height: 30px;
                 outline: none;
                 font-size: 20px;
@@ -58,7 +59,7 @@ center{
                 border-radius: 10px;
                 border: 2px solid lightgray;
             }
-            & button{
+             button{
                 padding: 9px;
                 margin-left: 17px;
                 font-size: 22px;
@@ -79,7 +80,7 @@ center{
         }
         ul{
                 
-            list-style-type: none;
+            list-style-type: none ;
             padding: 2px;
             
             & li{
@@ -94,7 +95,8 @@ center{
         }
     }
     #menu2{
-        margin-top: -800px;
+        
+        display: none;
         h3{
             font-family: 'Hind Siliguri', sans-serif;
             font-size: 40px;
@@ -127,6 +129,5 @@ center{
             }
         }
     }
-    }
-    
 }
+    

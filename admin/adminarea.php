@@ -15,11 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="adminarea.css">
-  <style>
-      #menu2{
-        position: relative;
-      }
-  </style>
+  
 </head>
 <body>
 
@@ -31,56 +27,49 @@
 <h1>Admin Panel</h1>
 </center>
 
-<center><h2>Welcome Admin User</h2></center>
 
-  <center>
-    <button class="btn btn-default"><a data-toggle="tab" href="#menu1">Categories</a></button><br>
-    <button class="btn btn-default"><a data-toggle="tab" href="#menu2">Questions</a></button>
-  </center>
-  <div class="container">
+ 
+
+
+<div class="container">
+    <center><h2>Welcome Admin User</h2></center>
+
+    <center>
+    <button class="btn btn-default" id="btn1"><a data-toggle="tab" href="#menu1">Categories</a></button><br>
+    <button class="btn btn-default" id="btn2"><a data-toggle="tab" href="#menu2">Questions</a></button>
+    </center>
+
     <div id="menu1" class="tab-pane fade">
-       <?php
-/*
-            $sel_c = "select * from category";
-
-            $run_c = mysqli_query($con, $sel_c);
-
-
-            while($row_cat1 = mysqli_fetch_array($run_c))
-            {
-                $cat1 = $row_cat1['cat_name'];
-                echo "<p> $cat1 </p><br>";
-            }
-            */
-      ?> 
-
-
+       
         <h3 style="font-family: 'Montserrat', sans-serif;">Add category</h3>    
-        <form method=post >
+        <form method =post>
             <div class="form-group">
-            <input type="text" class="form-control" id="cat" placeholder="Enter a new category" name="cat">
+                <input type="text" class="" id="cat" placeholder="Enter a new category" name="cat">
+                <button type="submit" name="add_cat" value="Add" >Add</button>
+            <!-- <input type="submit" name="add_cat" value="Add">    -->
             </div>
-            <button type="submit"  name="add_cat" value="Add">Add</button>
-            
         </form>
+
         <h2>Categories</h2>
-            <ul id="list">
-            <?php
+        <ul id="list">
+                <?php
 
-            $sel_c = "select * from category";
+                 $sel_c = "select * from category";
 
-            $run_c = mysqli_query($con, $sel_c);
+                $run_c = mysqli_query($con, $sel_c);
 
 
-            while($row_cat1 = mysqli_fetch_array($run_c))
-            {
-                $cat1 = $row_cat1['cat_name'];  
-                echo '<li class="listItems">'.$cat1.'</li>';
-            }
-            
-      ?>
+                while($row_cat1 = mysqli_fetch_array($run_c))
+                {
+                        $cat1 = $row_cat1['cat_name'];  
+                        echo '<li class="listItems">'.$cat1.'</li>';
+                }
+                    
+                ?>
+        </ul>
+        
 
-            </ul>
+        
         <?php
 
         if(isset($_POST['add_cat'])){
@@ -98,8 +87,9 @@
         } 
 
         ?>
+    
     </div>
-    <script src="script.js"></script>
+    
 
     <div id="menu2" class="tab-pane fade" >
      <h3><span>I</span> Add a new Question</h3>
@@ -152,10 +142,10 @@
     </div>
            
   </div>
-</div>
+  </div>
 
 
-
+<script src="script.js"></script>
 </body>
 
 
